@@ -37,11 +37,14 @@ The F1-score, which balances precision and recall, was 1.00 for loans repaid and
 The Logistic Regression model performed exceptionally well, achieving 99% accuracy with strong precision and recall scores for both classes. Below is a summary of its strengths and considerations:
 
 ### Which metric is most important?
+
 For a loan prediction model, recall for Class 1 (loans defaulted) is crucial. Missing a potential defaulter (false negative) could result in financial loss for the lender. In this case, the recall for loans defaulted was 0.94, which is quite high.
 
 ### Is precision for defaults important?
+
 While precision for Class 1 (0.86) indicates some false positives (loans incorrectly predicted to default), this is less concerning than missing actual defaulters. The lender might reject a few reliable borrowers, but this trade-off is often preferable to approving risky loans.
 
-### Recommendation:
+### Recommendation
+
 The Logistic Regression model performs very well with a high recall and accuracy. However, if further improvement is needed—especially in precision for defaulters—it might be worth exploring more advanced models like Random Forest or XGBoost. Fine-tuning the classification threshold could also help achieve a better balance between precision and recall.
 Given the high accuracy (0.99) and strong recall for defaulters (0.94), this model is recommended for deployment. It provides reliable predictions for managing credit risk and minimizing loan defaults.
